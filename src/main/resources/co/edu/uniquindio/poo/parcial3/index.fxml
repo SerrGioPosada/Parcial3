@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="rootPane"
+            fx:controller="co.edu.uniquindio.poo.parcial3.controller.IndexViewController"
+            stylesheets="@style.css"
+            prefHeight="650.0" prefWidth="1000.0">
+
+    <left>
+    </left>
+
+    <center>
+        <StackPane fx:id="centerPane" styleClass="center-pane"/>
+    </center>
+
+</BorderPane>

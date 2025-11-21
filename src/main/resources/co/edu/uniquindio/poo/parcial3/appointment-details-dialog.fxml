@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.poo.parcial3.controller.AppointmentDetailsDialogController"
+      spacing="15" style="-fx-padding: 20; -fx-background-color: white;" prefWidth="500">
+
+    <VBox style="-fx-padding: 10 0 15 0; -fx-border-color: #bdc3c7; -fx-border-width: 0 0 2 0;">
+        <Label text="Detalles de la Cita" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    </VBox>
+
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <Label text="Paciente:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="patientLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Doctor:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="doctorLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Fecha:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="dateLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Hora:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <Label fx:id="timeLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Precio:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <Label fx:id="priceLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Tipo:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <Label fx:id="typeLabel" text="" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    </GridPane>
+
+    <Separator/>
+
+    <Label text="Datos de la Consulta" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+    <GridPane hgap="15" vgap="15">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30"/>
+            <ColumnConstraints percentWidth="70"/>
+        </columnConstraints>
+
+        <Label text="Diagnóstico:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextArea fx:id="diagnosticoField" promptText="Ingrese el diagnóstico..." wrapText="true" prefRowCount="3"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Tratamiento:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextArea fx:id="tratamientoField" promptText="Ingrese el tratamiento..." wrapText="true" prefRowCount="3"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Observaciones:" style="-fx-font-weight: bold;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextArea fx:id="observacionesField" promptText="Observaciones adicionales..." wrapText="true" prefRowCount="3"
+                  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding: 15 0 0 0;">
+        <Button text="Cancelar" onAction="#handleCancel"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"
+                prefWidth="120"/>
+        <Button text="Finalizar Cita" onAction="#handleFinish"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 10 20; -fx-background-radius: 5;"
+                prefWidth="120"/>
+    </HBox>
+
+</VBox>

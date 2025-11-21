@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.poo.parcial3.controller.SidebarViewController"
+            prefWidth="200.0"
+            styleClass="sidebar">
+
+    <VBox alignment="TOP_LEFT" spacing="10" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+        <Label text="Clínica Médica" styleClass="sidebar-title"/>
+        <Separator/>
+        <Button fx:id="btnPatients" text="Pacientes" styleClass="sidebar-button" onAction="#loadPatients"/>
+        <Button fx:id="btnDoctors" text="Doctores" styleClass="sidebar-button" onAction="#loadDoctors"/>
+        <Button fx:id="btnAppointments" text="Citas" styleClass="sidebar-button" onAction="#loadAppointments"/>
+    </VBox>
+
+</AnchorPane>
